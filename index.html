@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>مهرجان الفرهدة والعجن مع العيلة 🫓✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-cream: #FFFBEB;
+      --primary-orange: #F97316;
+      --primary-dark: #7C2D12;
+      --marwa-main: #FF8A3D;
+      --marwa-bg: #FFEDD5;
+      --fatma-main: #F59E0B;
+      --fatma-bg: #FEF3C7;
+      --manar-main: #EC4899;
+      --manar-bg: #FCE7F3;
+      --mina-main: #0284C7;
+      --mina-bg: #E0F2FE;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 10%, #FEF9C3 0%, #FED7AA 55%, #FDBA74 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px 40px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* خلفية كرتونية متحركة لطيفة */
+    .bg-decorations {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: 50px;
+      filter: blur(1px);
+      animation: floatCloud 25s infinite linear;
+    }
+
+    .cloud-1 { width: 140px; height: 50px; top: 8%; left: -160px; animation-duration: 22s; }
+    .cloud-2 { width: 190px; height: 65px; top: 22%; left: -210px; animation-duration: 32s; animation-delay: 6s; }
+    .cloud-3 { width: 120px; height: 45px; top: 45%; left: -140px; animation-duration: 26s; animation-delay: 14s; }
+
+    @keyframes floatCloud {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(100vw + 250px)); }
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 22px;
+      opacity: 0.6;
+      animation: twinkle 3s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { transform: scale(0.8) rotate(0deg); opacity: 0.3; }
+      50% { transform: scale(1.3) rotate(20deg); opacity: 0.9; }
+    }
+
+    /* رأس الصفحة */
+    header {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 22px;
+      text-align: center;
+      max-width: 440px;
+      width: 100%;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFFFFF;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #EA580C;
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.15);
+      border: 2px solid #FDBA74;
+      margin-bottom: 8px;
+      animation: bounceMini 2s infinite ease-in-out;
+    }
+
+    @keyframes bounceMini {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    h1 {
+      color: #7C2D12;
+      font-size: 27px;
+      font-weight: 900;
+      line-height: 1.25;
+      text-shadow: 0 3px 0 #FED7AA, 0 6px 12px rgba(124, 45, 18, 0.15);
+      letter-spacing: -0.5px;
+    }
+
+    p.subtitle {
+      color: #9A3412;
+      font-size: 15px;
+      font-weight: 800;
+      margin-top: 6px;
+      background: rgba(255, 255, 255, 0.6);
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+
+    /* حاوية الكروت */
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* الكارت الكرتوني المطور */
+    .card {
+      position: relative;
+      border-radius: 26px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      border: 4px solid white;
+      box-shadow: 0 10px 0 rgba(0, 0, 0, 0.12), 0 16px 24px rgba(0, 0, 0, 0.08);
+      transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 70px;
+      height: 70px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 0 rgba(0, 0, 0, 0.12), 0 20px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .card:active {
+      transform: translateY(7px) scale(0.98);
+      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.12), 0 6px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-marwa { background: linear-gradient(135deg, #FFF7ED 0%, var(--marwa-bg) 100%); border-color: var(--marwa-main); }
+    .card-fatma { background: linear-gradient(135deg, #FFFBEB 0%, var(--fatma-bg) 100%); border-color: var(--fatma-main); }
+    .card-manar { background: linear-gradient(135deg, #FDF2F8 0%, var(--manar-bg) 100%); border-color: var(--manar-main); }
+    .card-mina  { background: linear-gradient(135deg, #F0F9FF 0%, var(--mina-bg) 100%);  border-color: var(--mina-main); }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: white;
+      padding: 4px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .card:hover .avatar-wrapper {
+      transform: rotate(-6deg) scale(1.08);
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      background: #FED7AA;
+    }
+
+    .avatar-tag {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      background: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .info {
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    .name-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .name {
+      font-size: 21px;
+      font-weight: 900;
+      color: #431407;
+      line-height: 1.2;
+    }
+
+    .card-mina .name { color: #0C4A6E; }
+
+    .action-pill {
+      background: white;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #EA580C;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 6px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 5px 12px;
+      border-radius: 14px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #9A3412;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      border: 1px dashed rgba(0, 0, 0, 0.1);
+    }
+
+    .card-mina .badge { color: #0369A1; }
+
+    /* شاشة اللعب والاهتزاز الكبرى (MODAL) */
+    #actionModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(30, 10, 4, 0.94) 0%, rgba(15, 5, 2, 0.98) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 18px env(safe-area-inset-bottom, 24px);
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* شريط الأدوات العلوي في الشاشة */
+    .modal-topbar {
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .btn-exit-top {
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+
+    .btn-exit-top:active {
+      transform: scale(0.92);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .character-title-chip {
+      background: rgba(255, 255, 255, 0.18);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 800;
+      color: #FED7AA;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* صندوق الكلام الكرتوني */
+    .speech-bubble {
+      position: relative;
+      background: white;
+      color: #431407;
+      padding: 16px 20px;
+      border-radius: 24px;
+      width: 100%;
+      max-width: 420px;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.5;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 0 4px #FDBA74;
+      animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .speech-bubble::after {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 14px 14px 0;
+      border-style: solid;
+      border-color: white transparent;
+      display: block;
+      width: 0;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* منطقة الهدف والعجين */
+    .target-wrapper {
+      position: relative;
+      width: 230px;
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    /* حلقة الهالة المضيئة خلف الشخصية */
+    .target-aura {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, rgba(251, 191, 36, 0) 70%);
+      animation: auraPulse 2s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    @keyframes auraPulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.35); opacity: 0.85; }
+    }
+
+    .target-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #FBBF24;
+      box-shadow: 0 0 35px rgba(251, 191, 36, 0.5), inset 0 0 15px rgba(0,0,0,0.2);
+      background: #FED7AA;
+      transform-origin: center center;
+      will-change: transform;
+      transition: transform 0.04s ease-out;
+      -webkit-user-drag: none;
+    }
+
+    /* نبض الكلام الأولي */
+    .speaking-pulse {
+      animation: pulseTalk 0.5s infinite alternate ease-in-out;
+      border-color: #38BDF8 !important;
+      box-shadow: 0 0 45px rgba(56, 189, 248, 0.7) !important;
+    }
+
+    @keyframes pulseTalk {
+      0% { transform: scale(0.97); }
+      100% { transform: scale(1.08); }
+    }
+
+    /* ملصق توجيهي على الشخصية */
+    .tap-hint-badge {
+      position: absolute;
+      bottom: -6px;
+      background: #EA580C;
+      color: white;
+      font-size: 13px;
+      font-weight: 900;
+      padding: 5px 14px;
+      border-radius: 999px;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      pointer-events: none;
+      white-space: nowrap;
+      animation: pulseHint 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulseHint {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* حاوية الجسيمات المتطايرة (طحين، قلوب، فواكه، حروف) */
+    .particles-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: visible;
+      z-index: 50;
+    }
+
+    .flying-particle {
+      position: absolute;
+      font-size: 28px;
+      pointer-events: none;
+      animation: flyAndFade 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes flyAndFade {
+      0% {
+        transform: translate(0, 0) scale(0.5) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--tx), var(--ty)) scale(1.6) rotate(var(--rot));
+        opacity: 0;
+      }
+    }
+
+    /* منطقة عداد الفرهدة والعجن */
+    .dashboard-panel {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .knead-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 17px;
+      font-weight: 900;
+      color: #FED7AA;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .knead-meter-wrapper {
+      position: relative;
+      width: 100%;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      padding: 4px;
+      border: 3px solid rgba(255, 255, 255, 0.4);
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    .knead-meter-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #F59E0B, #10B981, #EC4899);
+      border-radius: 999px;
+      transition: width 0.08s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.8);
+      position: relative;
+    }
+
+    .knead-meter-fill::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+      animation: shineMeter 1.5s infinite linear;
+    }
+
+    @keyframes shineMeter {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* نص التوجيه السريع */
+    .controls-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #FDE047;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+
+    /* شاشة الفوز والاحتفال (VICTORY OVERLAY) */
+    #victoryOverlay {
+      display: none;
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle, rgba(124, 45, 18, 0.96) 0%, rgba(67, 20, 7, 0.98) 100%);
+      z-index: 2000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      animation: fadeInVictory 0.3s ease-out;
+    }
+
+    @keyframes fadeInVictory {
+      0% { opacity: 0; transform: scale(0.92); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .victory-trophy {
+      font-size: 72px;
+      animation: trophyBounce 0.8s infinite alternate ease-in-out;
+      margin-bottom: 10px;
+    }
+
+    @keyframes trophyBounce {
+      0% { transform: translateY(0) scale(1) rotate(-5deg); }
+      100% { transform: translateY(-16px) scale(1.15) rotate(5deg); }
+    }
+
+    .victory-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #FDE047;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      margin-bottom: 8px;
+    }
+
+    .victory-msg {
+      font-size: 17px;
+      font-weight: 700;
+      color: #FFFFFF;
+      max-width: 380px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 14px 20px;
+      border-radius: 20px;
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+    }
+
+    .victory-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .btn-action {
+      background: #F97316;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 6px 0 #C2410C, 0 10px 18px rgba(0, 0, 0, 0.3);
+      transition: all 0.12s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-action:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #C2410C;
+    }
+
+    .btn-next {
+      background: #10B981;
+      box-shadow: 0 6px 0 #047857, 0 10px 18px rgba(0, 0, 0, 0.3);
+    }
+    .btn-next:active {
+      box-shadow: 0 2px 0 #047857;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.18);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: none;
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+    .btn-secondary:active {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(0.96);
+    }
+
+    /* كانفاس الكونفيتي */
+    #confettiCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- زينة الخلفية الكرتونية -->
+  <div class="bg-decorations">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="sparkle" style="top: 15%; right: 10%;">✨</div>
+    <div class="sparkle" style="top: 30%; left: 8%; animation-delay: 1s;">⭐</div>
+    <div class="sparkle" style="top: 70%; right: 12%; animation-delay: 2s;">🌟</div>
+    <div class="sparkle" style="top: 85%; left: 14%; animation-delay: 1.5s;">✨</div>
+  </div>
+
+  <header>
+    <div class="header-badge">
+      <span>🎉</span>
+      <span>ألعاب صوتية وتفاعلية للأطفال</span>
+    </div>
+    <h1>مهرجان الفرهدة والعجن! 🫓</h1>
+    <p class="subtitle">علّوا صوتكم أو اضربوا الشاشة واعجنوهم!</p>
+  </header>
+
+  <main class="container">
+    <!-- كارت خالتو مروة -->
+    <div class="card card-marwa" onclick="selectCharacter('marwa')">
+      <div class="avatar-wrapper">
+        <img class="avatar-img" src="marwa.jpg" alt="خالتو مروة" onerror="this.outerHTML='<div class=\'avatar-img\'>👩‍🦰</div>'">
+        <div class="avatar-tag">🥖</div>
+      </div>
+      <div class="info">
+        <div class="name-row">
+          <div class="name">خالتو مروة</div>
+          <span class="action-pill">اعجن ⚡</span>
+        </div>
+        <div class="badge">اعجنك يا مروة! (حرف م) 🍌</div>
+      </div>
+    </div>
+
+    <!-- كارت خالتو فاطمة -->
+    <div class="card card-fatma" onclick="selectCharacter('fatma')">
+      <div class="avatar-wrapper">
+        <img class="avatar-img" src="fatma.jpg" alt="خالتو فطومة" onerror="this.outerHTML='<div class=\'avatar-img\'>🧕</div>'">
+        <div class="avatar-tag">🔤</div>
+      </div>
+      <div class="info">
+        <div class="name-row">
+          <div class="name">خالتو فطومة</div>
+          <span class="action-pill">اعجن ⚡</span>
+        </div>
+        <div class="badge">ك كلب • م منار • أ أسد 🐶</div>
+      </div>
+    </div>
+
+    <!-- كارت ماما منار -->
+    <div class="card card-manar" onclick="selectCharacter('manar')">
+      <div class="avatar-wrapper">
+        <img class="avatar-img" src="manar.jpg" alt="ماما منار" onerror="this.outerHTML='<div class=\'avatar-img\'>❤️</div>'">
+        <div class="avatar-tag">💋</div>
+      </div>
+      <div class="info">
+        <div class="name-row">
+          <div class="name">ماما منار</div>
+          <span class="action-pill">اعجن ⚡</span>
+        </div>
+        <div class="badge">بوسة كبيرة لماما! امممواه ❤️</div>
+      </div>
+    </div>
+
+    <!-- كارت عمو مينا -->
+    <div class="card card-mina" onclick="selectCharacter('mina')">
+      <div class="avatar-wrapper">
+        <img class="avatar-img" src="mina.jpg" alt="عمو مينا" onerror="this.outerHTML='<div class=\'avatar-img\'>👦</div>'">
+        <div class="avatar-tag">⭐</div>
+      </div>
+      <div class="info">
+        <div class="name-row">
+          <div class="name">عمو مينا</div>
+          <span class="action-pill">اعجن ⚡</span>
+        </div>
+        <div class="badge">احنا كويسييييين! 🚀</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- شاشة اللعب والاهتزاز الكبرى -->
+  <div id="actionModal">
+    <!-- شريط علوي -->
+    <div class="modal-topbar">
+      <button class="btn-exit-top" onclick="closeModal()">
+        <span>✕</span>
+        <span>رجوع</span>
+      </button>
+      <div class="character-title-chip" id="modalCharacterName">خالتو مروة</div>
+    </div>
+
+    <!-- بالونة الكلام الكرتونية -->
+    <div class="speech-bubble" id="modalSpeechText">
+      جاري الاستعداد...
+    </div>
+
+    <!-- منطقة الهدف والعجين والجسيمات -->
+    <div class="target-wrapper" id="targetWrapper" onclick="handleDirectKneadTap(event)">
+      <div class="target-aura"></div>
+      <img id="targetImg" class="target-image" src="" alt="الصورة">
+      <div class="tap-hint-badge" id="tapBadge">اضغط هنا أو صوّت! 👆🎤</div>
+      <div class="particles-layer" id="particlesLayer"></div>
+    </div>
+
+    <!-- لوحة عداد الفرهدة -->
+    <div class="dashboard-panel">
+      <div class="knead-indicator">
+        <span id="kneadIcon">🥣</span>
+        <span id="kneadStatusText">اسمعوا الرسالة كويس...</span>
+      </div>
+
+      <div class="knead-meter-wrapper">
+        <div class="knead-meter-fill" id="kneadMeterBar"></div>
+      </div>
+
+      <div class="controls-hint">
+        <span>🎤 صوت عالي</span>
+        <span>•</span>
+        <span>👆 أو لمس سريع عجين</span>
+      </div>
+    </div>
+
+    <!-- شاشة الاحتفال عند اكتمال العجن -->
+    <div id="victoryOverlay">
+      <div class="victory-trophy">🏆</div>
+      <div class="victory-title">فرهدتونا بنجاح يا شطار! 🎉</div>
+      <div class="victory-msg" id="victorySpeechText">...</div>
+      <div class="victory-buttons">
+        <button class="btn-action btn-next" onclick="playNextCharacter()">
+          <span>الشخصية التالية</span>
+          <span>➡️</span>
+        </button>
+        <button class="btn-action" onclick="replayCurrentCharacter()">
+          <span>نعجنها تاني!</span>
+          <span>🔄</span>
+        </button>
+        <button class="btn-action btn-secondary" onclick="closeModal()">
+          <span>القائمة الرئيسية 🏠</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- كانفاس الكونفيتي -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <script>
+    /* ========================================================
+       بيانات الشخصيات ومقاييس العجن
+       ======================================================== */
+    const charactersOrder = ['marwa', 'fatma', 'manar', 'mina'];
+
+    const scriptData = {
+      marwa: {
+        name: "خالتو مروة",
+        img: "marwa.jpg",
+        prompt: "يا لهوي! مين اللي بينادي على مروة؟ هتعجنوا مروة كمان؟ مش هرد غير لما تعجنوا العجينة بصوتكم.. قولوا بصوت عالي: اعجنك يا مروة! وروني الفرهدة!",
+        success: "هههههه.. بس يا شقاوة فرهدتوني خلاص! حرف الميم بتاع مروة.. قولوا ورايا وزمروا: ممممم مروة.. ممممم موزة!",
+        requiredHits: 24,
+        particles: ['🍌', '🫓', '🥖', '✨', 'م']
+      },
+      fatma: {
+        name: "خالتو فطومة",
+        img: "fatma.jpg",
+        prompt: "أنا فطومة جيت أهو عشان نلعب ونتعلم الحروف سوا! يلا علوا صوتكم وقولوا ورا خالتو فطومة بصوت عالي: كاف كلب.. ميم منار.. ألف أسد! سمعوني صوتكم القوي يلا!",
+        success: "برافو عليكم يا أشطر كتاكيت! نطقكم جميل وصوتكم عالي وفرهدتوني.. شطار خالص: كاف كلب، ميم منار، ألف أسد! سقفوا لنفسكم سقفه كبيرة!",
+        requiredHits: 28,
+        particles: ['🐶', '🦁', '🔤', '🅰️', '✨']
+      },
+      manar: {
+        name: "ماما منار",
+        img: "manar.jpg",
+        prompt: "ماما منار حبيبتكم جت أهو.. مين بيحب ماما وهيديني بوسة كبيرة ويعجن معايا؟ يلا سمعوا ماما أحلى صوت بوسة في التليفون.. اممممممواه!",
+        success: "شطار يا حبايب ماما! يا روحي انتوا على الشطارة والجمال.. أحلى بوسة في الدنيا دي كلها، ربنا يخليكم ليا يا نور عين ماما!",
+        requiredHits: 20,
+        particles: ['❤️', '💋', '💖', '🥰', '✨']
+      },
+      mina: {
+        name: "عمو مينا",
+        img: "mina.jpg",
+        prompt: "ازيكم عاملين ايه؟... قولوا يلا عاملين ايه قولوا ورايا: احنا كويسيييين!",
+        success: "أشطر الشاطرين أنا مبسوط بيكم خالص يا شطار!",
+        requiredHits: 22,
+        particles: ['⭐', '🌟', '🚀', '🥳', '✨']
+      }
+    };
+
+    /* ========================================================
+       نظام المؤثرات الصوتية التخليقية (Web Audio API Synthesizer)
+       يعمل فوراً دون الحاجة لملفات صوت خارجية للأصوات الكرتونية
+       ======================================================== */
+    let sfxContext = null;
+
+    function getAudioContext() {
+      if (!sfxContext) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtx) {
+          sfxContext = new AudioCtx();
+        }
+      }
+      if (sfxContext && sfxContext.state === 'suspended') {
+        sfxContext.resume();
+      }
+      return sfxContext;
+    }
+
+    // صوت فرقعة / Pop كرتوني عند الضغط على الكروت
+    function playPopSFX() {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const now = ctx.currentTime;
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(450, now);
+        osc.frequency.exponentialRampToValueAtTime(150, now + 0.08);
+
+        gain.gain.setValueAtTime(0.4, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + 0.08);
+      } catch(e) {}
+    }
+
+    // صوت عجن مطاطي كرتوني / Boing-Squish
+    function playSquishSFX() {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const now = ctx.currentTime;
+
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(180, now);
+        osc.frequency.exponentialRampToValueAtTime(420, now + 0.06);
+        osc.frequency.exponentialRampToValueAtTime(120, now + 0.14);
+
+        gain.gain.setValueAtTime(0.35, now);
+        gain.gain.linearRampToValueAtTime(0.01, now + 0.14);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + 0.14);
+      } catch(e) {}
+    }
+
+    // نغمة فوز احتفالية كرتونية
+    function playFanfareSFX() {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const notes = [261.63, 329.63, 392.00, 523.25]; // C4, E4, G4, C5
+        notes.forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          const start = ctx.currentTime + (i * 0.11);
+
+          osc.type = 'triangle';
+          osc.frequency.value = freq;
+
+          gain.gain.setValueAtTime(0.25, start);
+          gain.gain.exponentialRampToValueAtTime(0.001, start + 0.35);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(start);
+          osc.stop(start + 0.35);
+        });
+      } catch(e) {}
+    }
+
+    /* ========================================================
+       نظام تشغيل الصوتيات وتسجيل المايك
+       ======================================================== */
+    let currentCharacter = 'marwa';
+    let isListening = false;
+    let audioPlayer = new Audio();
+    let microphoneStream = null;
+    let micAnalyser = null;
+    let currentKneadHits = 0;
+    const VOLUME_THRESHOLD = 32;
+
+    function playCustomAudio(characterId, type, onEnd) {
+      const targetImg = document.getElementById('targetImg');
+      targetImg.classList.add('speaking-pulse');
+
+      // أولاً نجرب المسار المباشر لأنه الموجود في المجلد
+      const directPath = `${characterId}_${type}.mp3`;
+      const fallbackPath = `sounds/${characterId}_${type}.mp3`;
+
+      audioPlayer.src = directPath;
+
+      audioPlayer.onended = () => {
+        targetImg.classList.remove('speaking-pulse');
+        if (onEnd) onEnd();
+      };
+
+      const playPromise = audioPlayer.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // محاولة المسار البديل إذا لم يكن في الجذر
+          audioPlayer.src = fallbackPath;
+          audioPlayer.play().catch(err => {
+            console.warn("Could not play audio file:", err);
+            targetImg.classList.remove('speaking-pulse');
+            // إذا فشل الصوت كلياً (مثل صلاحيات المتصفح الصارمة)، ننتقل مباشرة للخطوة التالية كي لا تعلق اللعبة
+            if (onEnd) setTimeout(onEnd, 1200);
+          });
+        });
+      }
+    }
+
+    async function initMicrophone() {
+      const ctx = getAudioContext();
+      if (!microphoneStream) {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+          throw new Error("المتصفح لا يدعم الوصول للمايكروفون");
+        }
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+        microphoneStream = stream;
+        const source = ctx.createMediaStreamSource(stream);
+        micAnalyser = ctx.createAnalyser();
+        micAnalyser.fftSize = 256;
+        source.connect(micAnalyser);
+      }
+    }
+
+    /* ========================================================
+       بدء المرحلة واختيار الشخصية
+       ======================================================== */
+    function selectCharacter(characterId) {
+      playPopSFX();
+      startLevel(characterId);
+    }
+
+    async function startLevel(characterId) {
+      currentCharacter = characterId;
+      currentKneadHits = 0;
+
+      const modal = document.getElementById('actionModal');
+      const modalCharacterName = document.getElementById('modalCharacterName');
+      const modalSpeechText = document.getElementById('modalSpeechText');
+      const kneadStatusText = document.getElementById('kneadStatusText');
+      const targetImg = document.getElementById('targetImg');
+      const kneadMeterBar = document.getElementById('kneadMeterBar');
+      const victoryOverlay = document.getElementById('victoryOverlay');
+      const tapBadge = document.getElementById('tapBadge');
+
+      victoryOverlay.style.display = 'none';
+      stopConfetti();
+
+      modalCharacterName.innerText = scriptData[characterId].name;
+      targetImg.src = scriptData[characterId].img;
+      targetImg.onerror = () => {
+        targetImg.src = "https://via.placeholder.com/230/FED7AA/7C2D12?text=" + encodeURIComponent(scriptData[characterId].name);
+      };
+
+      targetImg.style.transform = 'scale(1)';
+      kneadMeterBar.style.width = '0%';
+      tapBadge.style.display = 'block';
+
+      modal.style.display = 'flex';
+      modalSpeechText.innerText = scriptData[characterId].prompt;
+      kneadStatusText.innerText = "🔊 اسمعوا الرسالة كويس...";
+
+      playCustomAudio(characterId, 'prompt', async () => {
+        modalSpeechText.innerText = "يلا دوركم يا أبطال! علّوا صوتكم أو اضربوا الشاشة واعجنوا!";
+        kneadStatusText.innerText = "🎤 المايك شغال + 👆 اللمس شغال!";
+
+        // محاولة تشغيل المايك
+        try {
+          await initMicrophone();
+        } catch (e) {
+          console.log("Mic access issue, fallback to touch only:", e);
+          kneadStatusText.innerText = "👆 اضغطوا بأصابعكم بسرعة واعجنوا!";
+        }
+
+        startActiveKneadingLoop();
+      });
+    }
+
+    /* ========================================================
+       حلقة العجن المستمرة (صوت + لمس) وفيزياء العجين
+       ======================================================== */
+    function startActiveKneadingLoop() {
+      isListening = true;
+      const targetImg = document.getElementById('targetImg');
+      const bufferLength = micAnalyser ? micAnalyser.frequencyBinCount : 0;
+      const dataArray = bufferLength ? new Uint8Array(bufferLength) : null;
+
+      function renderLoop() {
+        if (!isListening) return;
+
+        let volume = 0;
+        if (micAnalyser && dataArray) {
+          micAnalyser.getByteFrequencyData(dataArray);
+          let sum = 0;
+          for (let i = 0; i < bufferLength; i++) {
+            sum += dataArray[i];
+          }
+          volume = sum / bufferLength;
+        }
+
+        // إذا كان هناك صوت حقيقي من الطفل
+        if (volume > VOLUME_THRESHOLD) {
+          applyDoughSquish(volume);
+          currentKneadHits += (volume / 25);
+          updateKneadProgress();
+
+          // إطلاق جسيمات عشوائية مع الصوت العالي
+          if (Math.random() < 0.28) {
+            spawnParticle();
+          }
+
+          if (currentKneadHits >= scriptData[currentCharacter].requiredHits) {
+            finishLevelSuccess();
+            return;
+          }
+        } else {
+          // العودة بالتدريج للوضع الطبيعي إذا لم يوجد صوت حالياً ولم يتم لمسها
+          if (!targetImg.dataset.touching) {
+            targetImg.style.transform = 'scale(1) rotate(0deg)';
+          }
+        }
+
+        requestAnimationFrame(renderLoop);
+      }
+
+      renderLoop();
+    }
+
+    // فيزياء العجن (Squash & Stretch)
+    function applyDoughSquish(intensity) {
+      const targetImg = document.getElementById('targetImg');
+      const factor = Math.min(intensity / 45, 1.35);
+
+      // تشوه كرتوني لعجين حقيقي (ينضغط أفقياً ويتمدد رأسياً أو العكس)
+      const isHorizontalSquish = Math.random() > 0.5;
+      const scaleX = isHorizontalSquish ? 1 + (0.35 * factor) : 1 - (0.22 * factor);
+      const scaleY = isHorizontalSquish ? 1 - (0.25 * factor) : 1 + (0.35 * factor);
+      const rot = (Math.random() - 0.5) * (20 * factor);
+      const shiftX = (Math.random() - 0.5) * (15 * factor);
+      const shiftY = (Math.random() - 0.5) * (15 * factor);
+
+      targetImg.style.transform = `translate(${shiftX}px, ${shiftY}px) scale(${scaleX}, ${scaleY}) rotate(${rot}deg)`;
+    }
+
+    // تفاعل اللمس / الضرب المباشر على الشخصية
+    function handleDirectKneadTap(e) {
+      if (!isListening) return;
+
+      playSquishSFX();
+      spawnParticle(e.clientX, e.clientY);
+
+      const targetImg = document.getElementById('targetImg');
+      targetImg.dataset.touching = "true";
+
+      applyDoughSquish(60);
+      currentKneadHits += 1.8;
+      updateKneadProgress();
+
+      setTimeout(() => {
+        targetImg.dataset.touching = "";
+      }, 90);
+
+      if (currentKneadHits >= scriptData[currentCharacter].requiredHits) {
+        finishLevelSuccess();
+      }
+    }
+
+    // تحديث شريط الفرهدة
+    function updateKneadProgress() {
+      const kneadMeterBar = document.getElementById('kneadMeterBar');
+      const maxHits = scriptData[currentCharacter].requiredHits;
+      const percent = Math.min((currentKneadHits / maxHits) * 100, 100);
+      kneadMeterBar.style.width = percent + '%';
+    }
+
+    // توليد الجسيمات الكرتونية المتطايرة (موز، قلوب، حروف، نجوم، طحين)
+    function spawnParticle(touchX, touchY) {
+      const layer = document.getElementById('particlesLayer');
+      const p = document.createElement('div');
+      p.className = 'flying-particle';
+
+      const list = scriptData[currentCharacter].particles;
+      p.innerText = list[Math.floor(Math.random() * list.length)];
+
+      // حساب مكان الانطلاق
+      const rect = document.getElementById('targetWrapper').getBoundingClientRect();
+      const originX = touchX ? (touchX - rect.left) : (rect.width / 2);
+      const originY = touchY ? (touchY - rect.top) : (rect.height / 2);
+
+      p.style.left = originX + 'px';
+      p.style.top = originY + 'px';
+
+      const angle = Math.random() * Math.PI * 2;
+      const dist = 60 + Math.random() * 90;
+      const tx = Math.cos(angle) * dist;
+      const ty = Math.sin(angle) * dist - 40; // طيران للأعلى كالعجين
+      const rot = ((Math.random() - 0.5) * 360) + 'deg';
+
+      p.style.setProperty('--tx', `${tx}px`);
+      p.style.setProperty('--ty', `${ty}px`);
+      p.style.setProperty('--rot', rot);
+
+      layer.appendChild(p);
+
+      setTimeout(() => {
+        if (p.parentNode) p.remove();
+      }, 850);
+    }
+
+    /* ========================================================
+       الاحتفال بالفوز الأسطوري وفتح الكانفاس
+       ======================================================== */
+    function finishLevelSuccess() {
+      isListening = false;
+      const targetImg = document.getElementById('targetImg');
+      targetImg.style.transform = 'scale(1.1) rotate(0deg)';
+
+      playFanfareSFX();
+      startConfetti();
+
+      const victoryOverlay = document.getElementById('victoryOverlay');
+      const victorySpeechText = document.getElementById('victorySpeechText');
+      const tapBadge = document.getElementById('tapBadge');
+
+      tapBadge.style.display = 'none';
+      victorySpeechText.innerText = scriptData[currentCharacter].success;
+      victoryOverlay.style.display = 'flex';
+
+      // تشغيل رسالة الفوز للشخصية
+      playCustomAudio(currentCharacter, 'success');
+    }
+
+    function replayCurrentCharacter() {
+      playPopSFX();
+      startLevel(currentCharacter);
+    }
+
+    function playNextCharacter() {
+      playPopSFX();
+      const currentIndex = charactersOrder.indexOf(currentCharacter);
+      const nextIndex = (currentIndex + 1) % charactersOrder.length;
+      startLevel(charactersOrder[nextIndex]);
+    }
+
+    function closeModal() {
+      playPopSFX();
+      isListening = false;
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+      stopConfetti();
+
+      document.getElementById('actionModal').style.display = 'none';
+      const targetImg = document.getElementById('targetImg');
+      targetImg.classList.remove('speaking-pulse');
+      targetImg.style.transform = 'scale(1)';
+    }
+
+    /* ========================================================
+       نظام الكونفيتي السريع (Canvas Confetti Engine)
+       ======================================================== */
+    let confettiAnimationId = null;
+    let confettiParticles = [];
+    const confettiColors = ['#F59E0B', '#EF4444', '#10B981', '#3B82F6', '#EC4899', '#8B5CF6', '#FBBF24'];
+
+    function startConfetti() {
+      const canvas = document.getElementById('confettiCanvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      confettiParticles = [];
+      for (let i = 0; i < 110; i++) {
+        confettiParticles.push({
+          x: canvas.width / 2,
+          y: canvas.height * 0.45,
+          vx: (Math.random() - 0.5) * 18,
+          vy: (Math.random() - 0.9) * 16,
+          size: Math.random() * 9 + 5,
+          color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+          rotation: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 12,
+          gravity: 0.35,
+          opacity: 1
+        });
+      }
+
+      function renderConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        confettiParticles.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += p.gravity;
+          p.vx *= 0.98;
+          p.rotation += p.rotSpeed;
+
+          if (p.y > canvas.height * 0.7) {
+            p.opacity -= 0.015;
+          }
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = Math.max(0, p.opacity);
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.7);
+          ctx.restore();
+        });
+
+        confettiParticles = confettiParticles.filter(p => p.opacity > 0 && p.y < canvas.height + 30);
+
+        if (confettiParticles.length > 0) {
+          confettiAnimationId = requestAnimationFrame(renderConfetti);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+
+      if (confettiAnimationId) cancelAnimationFrame(confettiAnimationId);
+      renderConfetti();
+    }
+
+    function stopConfetti() {
+      if (confettiAnimationId) {
+        cancelAnimationFrame(confettiAnimationId);
+        confettiAnimationId = null;
+      }
+      const canvas = document.getElementById('confettiCanvas');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+
+    // ضبط أبعاد الكانفاس عند تدوير الشاشة
+    window.addEventListener('resize', () => {
+      const canvas = document.getElementById('confettiCanvas');
+      if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+    });
+  </script>
+</body>
+</html>
